@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Open_Lab_04._12
 {
@@ -6,7 +6,16 @@ namespace Open_Lab_04._12
     {
         public int MissingNum(int[] nums)
         {
-            throw new NotImplementedException();
+            int sum;
+
+            sum = (nums.Length + 1) * (nums.Length + 2) / 2;
+
+            foreach (int nm in nums)
+            {
+                sum = sum - nm;
+            }
+
+            return sum;
         }
     }
 }
